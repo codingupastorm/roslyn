@@ -23,21 +23,10 @@ namespace EthSharp
         return storedData;
     }
 }";
+            //parse tree - create assembly then emit.
 
             var tree = SyntaxFactory.ParseSyntaxTree(source);
-            var root = tree.GetRoot();
-            foreach (var child in root.ChildNodes())
-            {
-                Console.WriteLine(child);
-            }
-            var trees = new List<SyntaxTree>
-            {
-                SyntaxFactory.ParseSyntaxTree(source)
-            };
-            var compilation = CSharpCompilation.Create("assemblyname", trees);
-            //compilation.
-            var stream = new MemoryStream();
-            compilation.Emit(stream);
+            var assembly = EthSharpCompiler.Create(tree);
             Console.ReadKey();
         }
     }
