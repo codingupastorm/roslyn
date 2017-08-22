@@ -228,6 +228,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Test.Utilities
                 options = TestOptions.Regular;
             }
 
+
             var stringText = StringText.From(text, Encoding.UTF8);
             return CheckSerializable(SyntaxFactory.ParseSyntaxTree(stringText, options, filename));
         }

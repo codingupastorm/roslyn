@@ -1,0 +1,11 @@
+﻿public class SimpleStorage {
+    private int storedData;
+
+    public void Set(int x) {
+        storedData = x;
+    }
+
+    public int Get(){
+        return storedData;
+    }
+}
