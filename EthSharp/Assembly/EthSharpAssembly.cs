@@ -15,14 +15,14 @@ namespace EthSharp.Assembly
             Items = new List<EthSharpAssemblyItem>();
         }
 
-        public EthSharpAssemblyItem NewData()
+        public EthSharpAssemblyItem NewData(byte[] value)
         {
             //AssemblyItem newData(bytes const& _data) { h256 h(dev::keccak256(asString(_data))); m_data[h] = _data; return AssemblyItem(PushData, h);
 
-            throw new NotImplementedException();   
+            throw new NotImplementedException();
         }
 
-    public void Append(EthSharpAssemblyItem assemblyItem)
+        public void Append(EthSharpAssemblyItem assemblyItem)
         {
             Items.Add(assemblyItem);
         }
@@ -39,8 +39,7 @@ namespace EthSharp.Assembly
 
         public void Append(byte[] value)
         {
-            throw new NotImplementedException();
-            Items.Add(NewData());
-        } 
+            Items.Add(NewData(value));
+        }
     }
 }
