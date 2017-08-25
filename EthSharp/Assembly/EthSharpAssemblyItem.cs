@@ -7,7 +7,7 @@ using EthSharp.Assembly;
 
 namespace EthSharp.Assembly
 {
-    public class AssemblyItem
+    public class EthSharpAssemblyItem
     {
         public enum JumpType
         {
@@ -19,28 +19,30 @@ namespace EthSharp.Assembly
         public AssemblyItemType Type { get; private set; }
 
         //private SourceLocation _sourceLocation;
-        public Instruction Instruction { get; private set; }
+        public EvmInstruction Instruction { get; private set; }
         public int Data { get; set; }
         public JumpType ItemJumpType { get; set; } = JumpType.Ordinary;
 
-        //public AssemblyItem(AssemblyItemType type, int data = 0)
-        //{
-        //    if (location == null)
-        //        location = new SourceLocation();
+        //NOTE: We are ignoring sourceLocation for now
 
-        //    _type = type;
-        //    Data = data;
-        //    _sourceLocation = location;
+        public EthSharpAssemblyItem(int push) : this(AssemblyItemType.Push, push)
+        {
+        }
 
-        //    if (_type == AssemblyItemType.Operation)
-        //    {
-        //        _instruction = (Instruction)data;
-        //    }
-        //    else
-        //    {
-        //        Data = data;
-        //    }
-        //}
+        public EthSharpAssemblyItem(EvmInstruction i)
+        {
+            Type = AssemblyItemType.Operation;
+            Instruction = i;
+        }
+
+        public EthSharpAssemblyItem(AssemblyItemType type, int data)
+        {
+            Type = type;
+            if (type == AssemblyItemType.Operation)
+                Instruction = (EvmInstruction) data; //this is silly - should never get here.
+            else
+                Data = data;
+        }
     }
 
     public enum AssemblyItemType

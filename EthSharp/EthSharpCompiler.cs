@@ -9,9 +9,11 @@ namespace EthSharp
 {
     public class EthSharpCompiler
     {
-        public static Assembly.Assembly Create(SyntaxTree root)
-        {
+        private EthSharpCompilerContext Context { get; set; }
 
+        public static Assembly.EthSharpAssembly Create(SyntaxTree root)
+        {
+            
             throw new NotImplementedException();
         }
     }

@@ -44,10 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assembly\Assembly.cs" />
-    <Compile Include="Assembly\AssemblyItem.cs" />
-    <Compile Include="Assembly\Instruction.cs" />
+    <Compile Include="Assembly\EthSharpAssembly.cs" />
+    <Compile Include="Assembly\EthSharpAssemblyItem.cs" />
+    <Compile Include="Assembly\EvmInstruction.cs" />
     <Compile Include="EthSharpCompiler.cs" />
+    <Compile Include="EthSharpCompilerContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

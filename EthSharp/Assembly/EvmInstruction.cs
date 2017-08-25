@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EthSharp.Assembly
 {
-    public enum Instruction
+    public enum EvmInstruction
     {
         STOP = 0x00,		///< halts execution
         ADD,				///< addition operation
