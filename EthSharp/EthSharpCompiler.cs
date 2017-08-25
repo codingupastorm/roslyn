@@ -16,5 +16,10 @@ namespace EthSharp
             
             throw new NotImplementedException();
         }
+
+        private void InitializeContext()
+        {
+            Context.Append();
+        }
     }
 }

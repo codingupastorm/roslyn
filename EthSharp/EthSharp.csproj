@@ -47,6 +47,8 @@
     <Compile Include="Assembly\EthSharpAssembly.cs" />
     <Compile Include="Assembly\EthSharpAssemblyItem.cs" />
     <Compile Include="Assembly\EvmInstruction.cs" />
+    <Compile Include="Common\Bits.cs" />
+    <Compile Include="Common\UInt256.cs" />
     <Compile Include="EthSharpCompiler.cs" />
     <Compile Include="EthSharpCompilerContext.cs" />
     <Compile Include="Program.cs" />
