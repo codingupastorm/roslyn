@@ -26,7 +26,7 @@ namespace EthSharp
             //parse tree - create assembly then emit.
 
             var tree = SyntaxFactory.ParseSyntaxTree(source);
-            var assembly = EthSharpCompiler.Create(tree);
+            var assembly = new EthSharpCompiler().Create(tree);
             Console.ReadKey();
         }
     }

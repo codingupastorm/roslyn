@@ -25,9 +25,7 @@ namespace EthSharp.Assembly
 
         //NOTE: We are ignoring sourceLocation for now
 
-        public EthSharpAssemblyItem(int push) : this(AssemblyItemType.Push, push)
-        {
-        }
+        public EthSharpAssemblyItem(int push) : this(AssemblyItemType.Push, push) {}
 
         public EthSharpAssemblyItem(EvmInstruction i)
         {
