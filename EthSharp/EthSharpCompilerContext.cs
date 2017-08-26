@@ -26,10 +26,10 @@ namespace EthSharp
             Assembly.Append(instruction);
         }
 
-        public void Append(byte[] value)
-        {
-            Assembly.Append(value);
-        } 
+        //public void Append(byte[] value)
+        //{
+        //    Assembly.Append(value);
+        //} 
 
     }
 }
